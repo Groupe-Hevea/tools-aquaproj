@@ -1,10 +1,10 @@
 ---
 name: test
 on:
-  push:
-    branches: [master]
   pull_request:
     branches: [master]
+    paths:
+      - 'aqua-config/**'
 env:
   AQUA_LOG_COLOR: always
   GITHUB_TOKEN: ${{ github.token }}
@@ -14,15 +14,16 @@ jobs:
     env:
       AQUA_CONFIG: aqua/ci-info.yaml
     steps:
-      - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
-      - uses: aquaproj/aqua-installer@928a2ee4243a9ee8312d80dc8cbaca88fb602a91 # v2.2.0
+      - uses: actions/checkout@v3
+      - uses: aquaproj/aqua-installer@v2.2.0
         with:
           aqua_version: v2.21.3
-      - uses: suzuki-shunsuke/ci-info-action/store@20bd996e371b27a229a348a09e17db8dcab1f2be # v0.1.2
+      - uses: suzuki-shunsuke/ci-info-action/store@v0.1.2
       - run: echo "https://github.com/aquaproj/aqua-registry/pull/$CI_INFO_PR_NUMBER" >> "$GITHUB_STEP_SUMMARY"
 
   test:
     needs: ci-info
+    if: 
     strategy:
       matrix:
         env:
@@ -43,9 +44,9 @@ jobs:
     env:
       AQUA_CONFIG: aqua-config/all.yaml
     steps:
-      - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
+      - uses: actions/checkout@v3
 
-      - uses: suzuki-shunsuke/ci-info-action/restore@20bd996e371b27a229a348a09e17db8dcab1f2be # v0.1.2
+      - uses: suzuki-shunsuke/ci-info-action/restore@v0.1.2
 
       # - name: Generate token
       #   id: generate_token
@@ -54,9 +55,17 @@ jobs:
       #     app_id: ${{ secrets.APP_ID }}
       #     private_key: ${{ secrets.APP_PRIVATE_KEY }}
 
-      - uses: aquaproj/aqua-installer@928a2ee4243a9ee8312d80dc8cbaca88fb602a91 # v2.2.0
+      - uses: aquaproj/aqua-installer@v2.2.0
         with:
           aqua_version: v2.21.3
+
+      - uses: aquaproj/registry-action/test@v0.2.0
+        with:
+          goos: ${{ matrix.env.goos }}
+          goarch: ${{ matrix.env.goarch }}
+          go_version: "1.18.5"
+        # env:
+        #   GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
 
   # This job is used for branch protection rule
   # Add this job to `Status checks that are required`
