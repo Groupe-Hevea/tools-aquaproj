@@ -2,7 +2,8 @@
 name: actionlint
 on:
   push:
-    branches: [master]
+    branches:
+      - renovate/**
     paths:
       - .github/**
   pull_request:

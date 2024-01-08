@@ -10,6 +10,7 @@ on:
   push:
     branches:
       - master
+      - renovate/**
     paths:
       - .github/workflows/renovate-config-validator.yaml
       - renovate.json

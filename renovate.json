@@ -10,6 +10,7 @@
     "github>suzuki-shunsuke/renovate-config#2.2.0"
   ],
   "automerge": true,
+  "automergeType":  "branch",
   "automergeSchedule": [
     "every weekend",
     "every weekday"

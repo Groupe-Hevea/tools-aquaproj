@@ -1,6 +1,11 @@
 ---
 name: test
 on:
+  push:
+    branches: 
+      - renovate/**
+    paths:
+      - 'aqua-config/**'
   pull_request:
     branches: [master]
     paths:
