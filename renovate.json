@@ -10,9 +10,17 @@
     "github>suzuki-shunsuke/renovate-config#2.2.0"
   ],
   "automerge": true,
+  "automergeSchedule": [
+    "every weekend"
+  ],
+  "dependencyDashboard": true,
   "platformAutomerge": true,
   "prHourlyLimit": 0,
   "prConcurrentLimit": 0,
+  "schedule": [
+    "after 8am every weekend"
+  ],
+  "timezone": "Europe/Paris",
   "branchConcurrentLimit": 0,
   "customManagers": [
     {
