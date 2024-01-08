@@ -28,7 +28,6 @@ jobs:
 
   test:
     needs: ci-info
-    if: 
     strategy:
       matrix:
         env:
