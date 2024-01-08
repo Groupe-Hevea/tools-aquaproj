@@ -5,6 +5,10 @@ on:
     branches: [master]
   pull_request:
     branches: [master]
+    types: [opened, synchronize, reopened]
+    paths:
+      - aqua-config/all.yaml
+
 env:
   AQUA_LOG_COLOR: always
   GITHUB_TOKEN: ${{ github.token }}
@@ -41,7 +45,7 @@ jobs:
       run:
         shell: bash
     env:
-      AQUA_CONFIG: aqua/test.yaml
+      AQUA_CONFIG: aqua/all.yaml
     steps:
       - uses: actions/checkout@v3
 
