@@ -23,9 +23,7 @@ Checkout this repository and set the environment variable `AQUA_GLOBAL_CONFIG`.
 
 ```console
 $ git checkout https://github.com/<REPO_OWNER>/<REPO_NAME>
-## Pour l'ensemble des packages utilisés :
-$ export AQUA_GLOBAL_CONFIG=$PWD/<REPO_NAME>/aqua-all.yaml:$AQUA_GLOBAL_CONFIG
-## Pour l'ensemble des packages utilisés pour les devs
+## Pour l'ensemble des collaborateurs :
 $ export AQUA_GLOBAL_CONFIG=$PWD/<REPO_NAME>/aqua-all.yaml:$AQUA_GLOBAL_CONFIG
 ```
 
