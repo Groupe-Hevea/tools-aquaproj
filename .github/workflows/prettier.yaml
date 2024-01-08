@@ -9,8 +9,8 @@ jobs:
   prettier:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: EPMatt/reviewdog-action-prettier@v1
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+      - uses: EPMatt/reviewdog-action-prettier@93fb51ed5da157256e1d8c998fb249837304050c # v1
         with:
           github_token: ${{ secrets.github_token }}
           # Change reviewdog reporter if you need
