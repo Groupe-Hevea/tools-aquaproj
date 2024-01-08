@@ -1,0 +1,76 @@
+---
+name: test
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+env:
+  AQUA_LOG_COLOR: always
+  GITHUB_TOKEN: ${{ github.token }}
+jobs:
+  ci-info:
+    runs-on: ubuntu-latest
+    env:
+      AQUA_CONFIG: aqua/ci-info.yaml
+    steps:
+      - uses: actions/checkout@v3
+      - uses: aquaproj/aqua-installer@v2.2.0
+        with:
+          aqua_version: v2.21.3
+      - uses: suzuki-shunsuke/ci-info-action/store@v0.1.2
+      - run: echo "https://github.com/aquaproj/aqua-registry/pull/$CI_INFO_PR_NUMBER" >> "$GITHUB_STEP_SUMMARY"
+
+  test:
+    needs: ci-info
+    strategy:
+      matrix:
+        env:
+          - runs-on: windows-latest
+          - runs-on: ubuntu-latest
+          - runs-on: macos-latest
+          - runs-on: ubuntu-latest
+            goarch: arm64
+          - runs-on: ubuntu-latest
+            goos: darwin
+            goarch: arm64
+          - runs-on: windows-latest
+            goarch: arm64
+    runs-on: ${{ matrix.env.runs-on }}
+    defaults:
+      run:
+        shell: bash
+    env:
+      AQUA_CONFIG: aqua/test.yaml
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: suzuki-shunsuke/ci-info-action/restore@v0.1.2
+
+      # - name: Generate token
+      #   id: generate_token
+      #   uses: tibdex/github-app-token@v1
+      #   with:
+      #     app_id: ${{ secrets.APP_ID }}
+      #     private_key: ${{ secrets.APP_PRIVATE_KEY }}
+
+      - uses: aquaproj/aqua-installer@v2.2.0
+        with:
+          aqua_version: v2.21.3
+
+      - uses: aquaproj/registry-action/test@v0.2.0
+        with:
+          goos: ${{ matrix.env.goos }}
+          goarch: ${{ matrix.env.goarch }}
+          go_version: "1.18.5"
+        # env:
+        #   GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
+
+  # This job is used for branch protection rule
+  # Add this job to `Status checks that are required`
+  status-check:
+    runs-on: ubuntu-latest
+    needs: [test]
+    if: failure()
+    steps:
+      - run: exit 1

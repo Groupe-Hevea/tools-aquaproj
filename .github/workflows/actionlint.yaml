@@ -1,0 +1,20 @@
+---
+name: actionlint
+on:
+  push:
+    branches: [master]
+    paths:
+      - .github/**
+  pull_request:
+    branches: [master]
+    paths:
+      - .github/**
+jobs:
+  default:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: aquaproj/aqua-installer@v2.2.0
+        with:
+          aqua_version: v2.21.3
+      - run: actionlint -ignore "duplicate value"
