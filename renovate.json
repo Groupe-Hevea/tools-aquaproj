@@ -11,17 +11,10 @@
   ],
   "automerge": true,
   "automergeType":  "branch",
-  "automergeSchedule": [
-    "every weekend",
-    "every weekday"
-  ],
   "dependencyDashboard": true,
   "platformAutomerge": true,
   "prHourlyLimit": 0,
   "prConcurrentLimit": 0,
-  "schedule": [
-    "after 8am every weekend"
-  ],
   "timezone": "Europe/Paris",
   "branchConcurrentLimit": 0,
   "customManagers": [
