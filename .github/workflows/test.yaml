@@ -2,14 +2,16 @@
 name: test
 on:
   push:
-    branches: 
+    branches:
       - renovate/**
     paths:
       - 'aqua-config/**'
+      - '.github/workflows/*.yaml'
   pull_request:
     branches: [master]
     paths:
       - 'aqua-config/**'
+      - '.github/workflows/*.yaml'
 env:
   AQUA_LOG_COLOR: always
   GITHUB_TOKEN: ${{ github.token }}
