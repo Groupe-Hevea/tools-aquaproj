@@ -7,11 +7,13 @@ on:
     paths:
       - 'aqua-config/**'
       - '.github/workflows/*.yaml'
+      - 'package*.json'
   pull_request:
     branches: [master]
     paths:
       - 'aqua-config/**'
       - '.github/workflows/*.yaml'
+      - 'package*.json'
 env:
   AQUA_LOG_COLOR: always
   GITHUB_TOKEN: ${{ github.token }}
@@ -23,7 +25,7 @@ jobs:
       AQUA_CONFIG: aqua/ci-info.yaml
     steps:
       - run: mkdir "$CI_INFO_TEMP_DIR"
-      - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
       - uses: aquaproj/aqua-installer@7c7338067bdb97d5bea2acc82b5870afca470d18 # v2.3.0
         with:
           aqua_version: v2.23.1
@@ -52,7 +54,7 @@ jobs:
     env:
       AQUA_CONFIG: aqua-config/all.yaml
     steps:
-      - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
 
       - uses: suzuki-shunsuke/ci-info-action/restore@ceeb10dd50cd632db31e7eccf92cbbb6856f3191 # v0.1.3
 
