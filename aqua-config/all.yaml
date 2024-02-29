@@ -11,5 +11,5 @@ registries:
     ref: v4.144.0 # renovate: depName=aquaproj/aqua-registry
 packages:
   - name: suzuki-shunsuke/cmdx@v1.7.4
-  - name: go-task/task@v3.34.1
+  - name: go-task/task@v3.35.0
   - name: martinvonz/jj@v0.14.0
