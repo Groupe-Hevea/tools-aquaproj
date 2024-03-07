@@ -12,4 +12,4 @@ registries:
 packages:
   - name: suzuki-shunsuke/cmdx@v1.7.4
   - name: go-task/task@v3.35.1
-  - name: martinvonz/jj@v0.15.0
+  - name: martinvonz/jj@v0.15.1
