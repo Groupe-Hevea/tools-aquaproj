@@ -25,7 +25,7 @@ jobs:
       AQUA_CONFIG: aqua/ci-info.yaml
     steps:
       - run: mkdir "$CI_INFO_TEMP_DIR"
-      - uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b # v4.1.4
+      - uses: actions/checkout@44c2b7a8a4ea60a981eaca3cf939b5f4305c123b # v4.1.5
       - uses: aquaproj/aqua-installer@4551ec64e21bf0f557c2525135ff0bd2cba40ec7 # v3.0.0
         with:
           aqua_version: v2.27.3
@@ -54,7 +54,7 @@ jobs:
     env:
       AQUA_CONFIG: aqua-config/all.yaml
     steps:
-      - uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b # v4.1.4
+      - uses: actions/checkout@44c2b7a8a4ea60a981eaca3cf939b5f4305c123b # v4.1.5
 
       - uses: suzuki-shunsuke/ci-info-action/restore@ceeb10dd50cd632db31e7eccf92cbbb6856f3191 # v0.1.3
 
