@@ -14,3 +14,4 @@ packages:
   - name: go-task/task@v3.37.2
   - name: martinvonz/jj@v0.18.0
   - name: cli/cli@v2.50.0
+  - name: starship/starship@v1.19.0
