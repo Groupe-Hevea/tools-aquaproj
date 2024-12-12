@@ -19,3 +19,4 @@ packages:
   - name: quantumsheep/sshs@4.5.1
   - name: anordal/shellharden@v4.3.1
   - name: atc0005/send2teams@v0.13.8
+  - name: koalaman/shellcheck@v0.10.0
