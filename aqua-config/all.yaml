@@ -20,5 +20,5 @@ packages:
   - name: anordal/shellharden@v4.3.1
   - name: atc0005/send2teams@v0.13.9
   - name: koalaman/shellcheck@v0.10.0
-  - name: jesseduffield/lazygit@v0.46.0
+  - name: jesseduffield/lazygit@v0.47.1
   - name: junegunn/fzf@v0.60.1
