@@ -1,12 +1,12 @@
 {
   "extends": [
     "config:recommended",
-    "github>aquaproj/aqua-renovate-config#2.7.4",
-    "github>aquaproj/aqua-renovate-config:file#2.7.4(CONTRIBUTING\\.md)",
-    "github>aquaproj/aqua-renovate-config:file#2.7.4(aqua-all\\.yaml)",
-    "github>aquaproj/aqua-renovate-config:file#2.7.4(aqua/.*\\.yaml)",
-    "github>aquaproj/aqua-renovate-config:file#2.7.4(aqua-config/.*\\.yaml)",
-    "github>aquaproj/aqua-renovate-config:file#2.7.4(pkgs/.*/pkg\\.yaml)",
+    "github>aquaproj/aqua-renovate-config#2.7.5",
+    "github>aquaproj/aqua-renovate-config:file#2.7.5(CONTRIBUTING\\.md)",
+    "github>aquaproj/aqua-renovate-config:file#2.7.5(aqua-all\\.yaml)",
+    "github>aquaproj/aqua-renovate-config:file#2.7.5(aqua/.*\\.yaml)",
+    "github>aquaproj/aqua-renovate-config:file#2.7.5(aqua-config/.*\\.yaml)",
+    "github>aquaproj/aqua-renovate-config:file#2.7.5(pkgs/.*/pkg\\.yaml)",
     "github>suzuki-shunsuke/renovate-config#3.1.0"
   ],
   "automerge": true,
