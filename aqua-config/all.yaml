@@ -10,7 +10,7 @@ registries:
   - type: standard
     ref: v4.337.0 # renovate: depName=aquaproj/aqua-registry
 packages:
-  - name: suzuki-shunsuke/cmdx@v1.7.7
+  - name: suzuki-shunsuke/cmdx@v2.0.0
   - name: go-task/task@v3.42.1
   - name: martinvonz/jj@v0.28.0
   - name: cli/cli@v2.69.0
