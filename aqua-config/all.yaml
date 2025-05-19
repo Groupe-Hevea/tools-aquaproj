@@ -18,7 +18,7 @@ packages:
   - name: charmbracelet/gum@v0.16.0
   - name: quantumsheep/sshs@4.7.2
   - name: anordal/shellharden@v4.3.1
-  - name: atc0005/send2teams@v0.13.10
+  - name: atc0005/send2teams@v0.13.11
   - name: koalaman/shellcheck@v0.10.0
   - name: jesseduffield/lazygit@v0.50.0
   - name: junegunn/fzf@v0.62.0
