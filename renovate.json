@@ -7,7 +7,7 @@
     "github>aquaproj/aqua-renovate-config:file#2.8.2(aqua/.*\\.yaml)",
     "github>aquaproj/aqua-renovate-config:file#2.8.2(aqua-config/.*\\.yaml)",
     "github>aquaproj/aqua-renovate-config:file#2.8.2(pkgs/.*/pkg\\.yaml)",
-    "github>suzuki-shunsuke/renovate-config#3.2.2"
+    "github>suzuki-shunsuke/renovate-config#3.2.1"
   ],
   "automerge": true,
   "automergeType":  "branch",
