@@ -24,6 +24,6 @@ packages:
   - name: junegunn/fzf@v0.67.0
   - name: noahgorstein/jqp@v0.8.0
   - name: orhun/git-cliff@v2.10.1
-  - name: NikitaCOEUR/dirvana@v0.4.0
+  - name: NikitaCOEUR/dirvana@v0.5.0
   - name: imsnif/bandwhich@v0.23.1
   - name: zellij-org/zellij@v0.43.1
