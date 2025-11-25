@@ -27,3 +27,4 @@ packages:
   - name: NikitaCOEUR/dirvana@v0.6.0
   - name: imsnif/bandwhich@v0.23.1
   - name: zellij-org/zellij@v0.43.1
+  - name: BurntSushi/ripgrep@15.1.0
