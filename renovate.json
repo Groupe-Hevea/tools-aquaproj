@@ -10,7 +10,7 @@
     "github>suzuki-shunsuke/renovate-config#3.3.1"
   ],
   "automerge": true,
-  "automergeType":  "branch",
+  "automergeType": "branch",
   "dependencyDashboard": true,
   "platformAutomerge": true,
   "prHourlyLimit": 0,
@@ -20,7 +20,9 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["README.md"],
+      "managerFilePatterns": [
+        "/README.md/"
+      ],
       "matchStrings": [
         "ref: (?<currentValue>.*?) # renovate: depName=(?<depName>.*)"
       ],
