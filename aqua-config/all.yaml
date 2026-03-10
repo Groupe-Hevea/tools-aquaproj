@@ -9,24 +9,4 @@
 registries:
   - type: standard
     ref: v4.480.0 # renovate: depName=aquaproj/aqua-registry
-packages:
-  - name: suzuki-shunsuke/cmdx@v2.0.2
-  - name: go-task/task@v3.48.0
-  - name: martinvonz/jj@v0.39.0
-  - name: cli/cli@v2.87.3
-  - name: starship/starship@v1.24.2
-  - name: charmbracelet/gum@v0.17.0
-  - name: quantumsheep/sshs@4.7.2
-  - name: anordal/shellharden@v4.3.1
-  - name: atc0005/send2teams@v0.13.14
-  - name: koalaman/shellcheck@v0.11.0
-  - name: jesseduffield/lazygit@v0.59.0
-  - name: junegunn/fzf@v0.70.0
-  - name: noahgorstein/jqp@v0.8.0
-  - name: orhun/git-cliff@v2.12.0
-  - name: NikitaCOEUR/dirvana@v0.8.2
-  - name: imsnif/bandwhich@v0.23.1
-  - name: zellij-org/zellij@v0.43.1
-  - name: BurntSushi/ripgrep@15.1.0
-  - name: datadog-labs/pup@v0.27.0
-  - name: rtk-ai/rtk@v0.27.2
+import_dir: imports
