@@ -28,5 +28,5 @@ packages:
   - name: imsnif/bandwhich@v0.23.1
   - name: zellij-org/zellij@v0.44.0
   - name: BurntSushi/ripgrep@15.1.0
-  - name: datadog-labs/pup@v0.40.1
+  - name: datadog-labs/pup@v0.43.0
   - name: rtk-ai/rtk@v0.34.2
