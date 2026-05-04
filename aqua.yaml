@@ -7,7 +7,7 @@ registries:
     name: std
 packages:
   - import: aqua-local.yaml
-  - name: aquaproj/registry-tool@v0.5.1
+  - name: aquaproj/registry-tool@v0.5.2
     registry: std
   - name: rhysd/actionlint@v1.7.12
     registry: std
