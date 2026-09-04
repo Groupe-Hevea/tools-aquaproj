@@ -15,7 +15,7 @@ packages:
   - name: martinvonz/jj@v0.44.0
   - name: cli/cli@v2.98.0
   - name: starship/starship@v1.26.0
-  - name: charmbracelet/gum@v0.17.0
+  - name: charmbracelet/gum@v2.0.0
   - name: quantumsheep/sshs@4.8.0
   - name: anordal/shellharden@v4.3.2
   - name: atc0005/send2teams@v0.14.0
