@@ -29,4 +29,4 @@ packages:
   - name: zellij-org/zellij@v0.45.1
   - name: BurntSushi/ripgrep@15.2.0
   - name: datadog-labs/pup@v1.16.1
-  - name: rtk-ai/rtk@v0.46.0
+  - name: rtk-ai/rtk@v0.47.0
