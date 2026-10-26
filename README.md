@@ -27,6 +27,15 @@ $ git checkout https://github.com/<REPO_OWNER>/<REPO_NAME>
 $ export AQUA_GLOBAL_CONFIG=$PWD/<REPO_NAME>/aqua-all.yaml:$AQUA_GLOBAL_CONFIG
 ```
 
+## Ajouter un outil
+
+Un fichier par paquet dans `aqua-config/packages/` (extension `.yaml`, nommé d'après le dépôt de l'outil), importé par `aqua-config/all.yaml` via `import_dir` :
+
+```yaml
+packages:
+  - name: jdx/fnox@v1.42.1
+```
+
 ## LICENSE
 
 [MIT](LICENSE)

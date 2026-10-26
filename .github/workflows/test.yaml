@@ -65,9 +65,19 @@ jobs:
       #     app_id: ${{ secrets.APP_ID }}
       #     private_key: ${{ secrets.APP_PRIVATE_KEY }}
 
+      # Also runs `aqua i -l`: checks every package exists in the registry without downloading it
       - uses: aquaproj/aqua-installer@611554c6f0137ba41c8dd15aca8bee82504ea461 # v4.1.1
         with:
           aqua_version: v2.65.2
+
+      # aqua only logs unparsable imported files and silently ignores a missing import_dir
+      - name: Check every declared package is loaded
+        run: |
+          expected=$(cat aqua-config/packages/*.yaml | grep -c '^ *- name:')
+          actual=$(aqua list -i | wc -l)
+          echo "declared: $expected, loaded by aqua: $actual"
+          test "$expected" -gt 0
+          test "$expected" -eq "$actual"
 
       # - uses: aquaproj/registry-action/test@v0.2.0
       #   with:

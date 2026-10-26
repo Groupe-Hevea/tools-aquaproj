@@ -1,0 +1,2 @@
+packages:
+  - name: datadog-labs/pup@v2.3.0
