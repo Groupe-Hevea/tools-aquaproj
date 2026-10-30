@@ -8,6 +8,6 @@
 #   - all
 registries:
   - type: standard
-    ref: v4.578.0 # renovate: depName=aquaproj/aqua-registry
+    ref: v4.579.0 # renovate: depName=aquaproj/aqua-registry
 # One file per package in packages/ so that Renovate updates don't conflict
 import_dir: packages
